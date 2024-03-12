@@ -1,0 +1,22 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "rules": {
+    "color-hex-alpha": "never",
+    "color-named": "never",
+    "color-no-hex": null,
+    "comment-pattern": null,
+    "declaration-no-important": true,
+    "declaration-property-max-values": { "border-radius": 999 },
+    "declaration-property-value-no-unknown": null,
+    "font-weight-notation": "numeric",
+    "function-url-no-scheme-relative": null,
+    "max-nesting-depth": 4,
+    "media-feature-name-value-no-unknown": true,
+    "no-unknown-animations": true,
+    "no-unknown-custom-properties": true,
+    "selector-max-universal": 0,
+    "selector-nested-pattern": null,
+    "selector-no-qualifying-type": null,
+    "time-min-milliseconds": 48
+  }
+}
