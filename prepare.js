@@ -31,9 +31,9 @@ const main = async () => {
       //   console.log(`[warn] disabled rule: ${key}`);
       // }
 
-      if (recommendedRules[key] || standardRules[key]) {
-        throw new Error(`core rule: ${key}`);
-      }
+      // if (recommendedRules[key] || standardRules[key]) {
+      //   console.log(`core rule: ${key}`);
+      // }
 
       if (
         configRules[key] !== null &&
@@ -45,7 +45,11 @@ const main = async () => {
 
       rules[key] = configRules[key];
     } else if (!recommendedRules[key] && !standardRules[key]) {
-      if (key.endsWith('-list') || key.startsWith('selector-max-')) {
+      if (
+        key.endsWith('-list') ||
+        key.endsWith('-pattern') ||
+        key.startsWith('selector-max-')
+      ) {
         rules[key] = null;
       } else if (!(await stylelintRules[key]).primaryOptionArray) {
         throw new Error(`undefined options: ${key}`);
