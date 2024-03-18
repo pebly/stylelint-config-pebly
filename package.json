@@ -1,9 +1,13 @@
 {
   "dependencies": {
     "stylelint": "^16.2.1",
+    "stylelint-config-recommended": "^14.0.0",
     "stylelint-config-standard": "^36.0.0"
   },
+  "name": "stylelint-config-pebly",
   "scripts": {
+    "preinstall": "npx -y only-allow pnpm",
     "prepare": "node prepare.js"
-  }
+  },
+  "version": "0.1.0"
 }
